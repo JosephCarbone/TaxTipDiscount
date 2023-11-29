@@ -1,0 +1,304 @@
+import time
+import random
+import math
+
+while True:
+
+    TypeOfCalc = input("What type of Calculator do you want? Tax, Tip or Discount?\n")
+
+    if TypeOfCalc == "Tax" or TypeOfCalc == "tax":
+        print("Loading Tax Calculator")
+        time.sleep(0.2)
+        print("Loading Tax Calculator.")
+        time.sleep(0.2)
+        print("Loading Tax Calculator..")
+        time.sleep(0.2)
+        print("Loading Tax Calculator...")
+        time.sleep(0.2)
+        print("Loading Complete!")
+        time.sleep(0.2)
+        TaxPrice = input("What is the price of your item? Dont use dollar sign. Example, 23.76\n")    
+        TaxPrice = float(TaxPrice)
+        TaxPercent = input("If the price is $" + str(TaxPrice) + " what is the percent of tax? Dont use percent. Example, 23.76\n")
+
+        if float(TaxPercent) < 10:
+            # Changing the Percent to a decimal :> (Good luck!!!!!)
+            TaxPercent = float(TaxPercent)
+
+            TaxPercent = TaxPercent / 10
+            TaxPercent = TaxPercent / 10
+
+           
+
+
+
+            AnswerBeforeFinal = TaxPrice * TaxPercent
+            AnswerBeforeFinal = AnswerBeforeFinal
+            print("The tax is $" + str(AnswerBeforeFinal))
+            TaxFinalAnswerYN = input("Do you want the final answer?\n")
+            if TaxFinalAnswerYN == "Yes" or TaxFinalAnswerYN == "yes":
+                taxFinal = TaxPrice + AnswerBeforeFinal
+                print("The final answer is $" + str(taxFinal))
+            elif TaxFinalAnswerYN =="No" or TaxFinalAnswerYN == "no":
+                print("Ok see ya later!")
+                time.sleep(1)
+            else:
+                print("That is not a answer.")
+                time.sleep(1)
+
+        elif float(TaxPercent) >= 10 and float(TaxPercent) < 100:
+            TaxPercent = float(TaxPercent)
+            TaxPercent = TaxPercent / 10
+            TaxPercent = TaxPercent / 10
+
+            AnswerBeforeFinal = TaxPrice * TaxPercent
+            print("the tax is $" + str(AnswerBeforeFinal))
+            TaxFinalAnswerYN = input("Do you want the final answer?\n")
+            if TaxFinalAnswerYN == "Yes" or TaxFinalAnswerYN == "yes":
+                taxFinal = TaxPrice + AnswerBeforeFinal
+                print("The final answer is $" + str(taxFinal))
+            elif TaxFinalAnswerYN =="No" or TaxFinalAnswerYN == "no":
+                print("Ok see ya later!")
+                time.sleep(1)
+            else:
+                print("That is not a answer.")
+                time.sleep(1)
+        elif float(TaxPercent) == 100:
+           
+            print("the tax is $" + str(TaxPrice))
+            TaxFinalAnswerYN = input("Do you want the final answer?\n")
+            if TaxFinalAnswerYN == "Yes" or TaxFinalAnswerYN == "yes":
+                print("The final answer is $" + str(TaxPrice + TaxPrice))
+            elif TaxFinalAnswerYN =="No" or TaxFinalAnswerYN == "no":
+                print("Ok see ya later!")
+                time.sleep(1)
+            else:
+                print("That is not a answer.")
+                time.sleep(1)
+        else:
+            print("Do not go above 100%")
+            time.sleep(1)
+
+
+
+
+
+
+       
+    elif TypeOfCalc == "Tip" or TypeOfCalc == "tip":
+        print("Loading Tip Calculator")
+        time.sleep(0.2)
+        print("Loading Tip Calculator.")
+        time.sleep(0.2)
+        print("Loading Tip Calculator..")
+        time.sleep(0.2)
+        print("Loading Tip Calculator...")
+        time.sleep(0.2)
+        print("Loading Complete!")
+        time.sleep(0.2)
+       
+        TipPrice = input("What is the price of your item? Dont use dollar sign. Example, 23.76\n")    
+        TipPrice = float(TipPrice)
+        TipPercent = input("If the price is $" + str(TipPrice) + " what is the percent of tip you want? Dont use percent. Example, 23.76\n")
+
+        if float(TipPercent) < 10:
+            TipPercent = float(TipPercent)
+
+            TipPercent = TipPercent / 10
+            TipPercent = TipPercent / 10
+
+           
+
+
+
+            AnswerBeforeFinal = TipPrice * TipPercent
+            AnswerBeforeFinal = AnswerBeforeFinal
+            print("The tip is $" + str(AnswerBeforeFinal))
+            TipFinalAnswerYN = input("Do you want the final answer?\n")
+            if TipFinalAnswerYN == "Yes" or TipFinalAnswerYN == "yes":
+                tipFinal = TipPrice + AnswerBeforeFinal
+                print("The final answer is $" + str(tipFinal))
+            elif TipFinalAnswerYN =="No" or TipFinalAnswerYN == "no":
+                print("Ok see ya later!")
+                time.sleep(1)
+            else:
+                print("That is not a answer.")
+                time.sleep(1)
+
+        elif float(TipPercent) >= 10 and float(TipPercent) < 100:
+            TipPercent = float(TipPercent)
+            TipPercent = TipPercent / 10
+            TipPercent = TipPercent / 10
+
+            AnswerBeforeFinal = TipPrice * TipPercent
+            print("the tip is $" + str(AnswerBeforeFinal))
+            TipFinalAnswerYN = input("Do you want the final answer?\n")
+            if TipFinalAnswerYN == "Yes" or TipFinalAnswerYN == "yes":
+                tipFinal = TipPrice + AnswerBeforeFinal
+                print("The final answer is $" + str(tipFinal))
+            elif TipFinalAnswerYN =="No" or TipFinalAnswerYN == "no":
+                print("Ok see ya later!")
+                time.sleep(1)
+            else:
+                print("That is not a answer.")
+                time.sleep(1)
+        elif float(TipPercent) == 100:
+           
+            print("the tax is $" + str(TipPrice))
+            TipFinalAnswerYN = input("Do you want the final answer?\n")
+            if TipFinalAnswerYN == "Yes" or TipFinalAnswerYN == "yes":
+                print("The final answer is $" + str(TipPrice + TipPrice))
+            elif TipFinalAnswerYN =="No" or TipFinalAnswerYN == "no":
+                print("Ok see ya later!")
+                time.sleep(1)
+            else:
+                print("That is not a answer.")
+                time.sleep(1)
+        else:
+            print("Do not go above 100%")
+            time.sleep(1)
+       
+
+
+
+    elif TypeOfCalc == "Discount" or TypeOfCalc == "discount":
+        print("Loading Discount Calculator")
+        time.sleep(0.2)
+        print("Loading Discount Calculator.")
+        time.sleep(0.2)
+        print("Loading Discount Calculator..")
+        time.sleep(0.2)
+        print("Loading Discount Calculator...")
+        time.sleep(0.2)
+        print("Loading Complete!")
+        time.sleep(0.2)
+
+        discountPrice = input("What is the price of your item?\n")
+        discountPrice = float(discountPrice)
+       
+        discountPercent = input("What is the percent of your item? Dont use %\n")
+        discountPercent = float(discountPercent)
+
+        typeofDiscount = input("Do you want the discount or the sale price? Use discount or sale. \n")
+
+        if typeofDiscount == "discount" or typeofDiscount == "Discount":
+           
+            if discountPercent < 10 and discountPercent > 0:
+                discountPercent = discountPercent / 10
+                discountPercent = discountPercent / 10
+                discountFinal = discountPrice * discountPercent
+
+
+
+                print("Your discount is $" + str(discountFinal))
+                time.sleep(0.2)
+                SaleYN = input("Do you want the sale price? Yes or No \n")
+
+                if SaleYN == "Yes" or SaleYN == "yes":
+                    SalePrice = discountPrice - discountFinal
+                    print("The Sale Price is $" + str(SalePrice))
+                if SaleYN == "No" or SaleYN == "no":
+                    print("Ok good bye.")
+
+
+
+
+            elif discountPercent >= 10 and discountPercent < 100:
+                discountPercent = discountPercent / 10
+                discountPercent = discountPercent / 10
+                discountFinal = discountPrice * discountPercent
+
+
+
+                print("Your discount is $" + str(discountFinal))
+                time.sleep(0.2)
+                SaleYN = input("Do you want the sale price? Yes or No \n")
+
+                if SaleYN == "Yes" or SaleYN == "yes":
+                    SalePrice = discountPrice - discountFinal
+                    print("The Sale Price is $" + str(SalePrice))
+                if SaleYN == "No" or SaleYN == "no":
+                    print("Ok good bye.")
+
+
+
+            elif discountPercent == 100:
+                firstDiscount = discountPrice
+                discountFinal = 0
+
+
+
+                print("Your discount is $" + str(firstDiscount))
+                time.sleep(0.2)
+                SaleYN = input("Do you want the sale price? Yes or No \n")
+
+                if SaleYN == "Yes" or SaleYN == "yes":
+                    print("The Sale Price is $" + str(discountFinal))
+                if SaleYN == "No" or SaleYN == "no":
+                    print("Ok good bye.")
+
+           
+           
+
+           
+
+           
+       
+       
+           
+
+
+        elif typeofDiscount == "sale" or typeofDiscount == "Sale":
+           
+            if discountPercent < 10 and discountPercent > 0:
+                discountPercent = discountPercent / 10
+                discountPercent = discountPercent / 10
+
+
+                discountFinal = discountPrice * discountPercent
+           
+                SalePrice = discountPrice - discountFinal
+                print("The Sale Price is $" + str(SalePrice))
+
+
+            elif discountPercent >= 10 and discountPercent < 100:
+                discountPercent = discountPercent / 10
+                discountPercent = discountPercent / 10
+           
+                discountFinal = discountPrice * discountPercent
+           
+                SalePrice = discountPrice - discountFinal
+                print("The Sale Price is $" + str(SalePrice))
+
+            elif discountPrice == 100:
+                discountFinal = 0
+
+
+                print("The Sale Price is $" + str(discountFinal))
+               
+       
+           
+
+
+
+               
+
+
+
+        else:
+            print("Dont do that.")
+
+
+
+
+
+           
+       
+           
+       
+               
+
+
+
+    else:
+        print("That is not a type of Calculator.")
